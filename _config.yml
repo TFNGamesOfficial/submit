@@ -1,81 +1,84 @@
-# Dependencies
-markdown:       kramdown
-highlighter:    rouge
+### Site Settings ###
+title               : TFNGames
+description         : Welcome to TFNGames! 
+                      Accounts are temporarily disabled! Read more about it in the news tab.
+baseurl             : "https://www.tfngames.tk"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository          : TFNGamesOfficial/TFNGamesOfficial.github.io    # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme        : YoussefRaafatNasry/portfolYOU
+open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
-kramdown:
-  auto_ids:     true
 
-# Permalinks
-permalink:      pretty
-
-# Server
-source:         "."
-destination:    ./_gh_pages
-host:           0.0.0.0
-port:           9001
-baseurl:        ""
-url:            "https://getbootstrap.com"
-encoding:       UTF-8
-exclude:
-  - .git/
-  - .github/
-  - assets/scss/
-  - build/
-  - js/
-  - node_modules/
-  - nuget/
-  - scss/
-  - vendor/
-  - CODE_OF_CONDUCT.md
-  - composer.json
-  - Gemfile
-  - Gemfile.lock
-  - package.js
-  - package.json
-  - package-lock.json
-  - README.md
-  - sache.json
-  - twbsconfig.yml
-
+### Plugins ###
 plugins:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-  - jekyll-toc
+  - jemoji
 
-# Social
-title:              Bootstrap
-description:        "The most popular HTML, CSS, and JS library in the world."
-twitter:            getbootstrap
-authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
-social_image_path:  /assets/brand/bootstrap-social.png
-social_logo_path:   /assets/brand/bootstrap-social-logo.png
 
-# Custom variables
-current_version:      4.0.0
-current_ruby_version: 4.0.0
-docs_version:         4.0
-repo:                 "https://github.com/twbs/bootstrap"
-slack:                "https://bootstrap-slack.herokuapp.com"
-blog:                 "https://blog.getbootstrap.com"
-expo:                 "https://expo.getbootstrap.com"
-jobs:                 "https://jobs.getbootstrap.com"
-themes:               "https://themes.getbootstrap.com"
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - pages/projects.html
+  - pages/request1.md
+  - pages/request2.md
 
-download:
-  source:           "https://github.com/twbs/bootstrap/archive/v4.0.0.zip"
-  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.zip"
 
-cdn:
-  # See https://www.srihash.org for info on how to generate the hashes
-  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  css_hash:         "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  jquery_hash:      "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  popper_hash:      "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+### Author Info ###
+author:
+  name              : TFNGames
+  image             : https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png
 
-toc:
-  min_level:        2
-  max_level:        4
+
+### Posts ###
+permalink: /news/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+
+### Disqus ###
+disqus:
+  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+buymeacoffee:
+  enabled: false
+  username: your_username
+  color: "#007bff"
+  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
