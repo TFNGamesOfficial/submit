@@ -2,7 +2,7 @@
 title               : TFNGames
 description         : Welcome to TFNGames! 
                       Accounts are temporarily disabled! Read more about it in the news tab.
-baseurl             : "https://www.tfngames.tk"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : TFNGamesOfficial/TFNGamesOfficial.github.io    # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
